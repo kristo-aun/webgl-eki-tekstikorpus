@@ -9,32 +9,28 @@ animate();
 
 function init() {
 
-    camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 10000);
+    camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 1, 10000);
     camera.position.z = 3000;
 
     scene = new THREE.Scene();
 
     // table
 
-    for (var i = 0; i < table.length; i += 5) {
-
+    for (var i = 0; i < table.length; i++) {
+        console.log(i);
         var element = document.createElement('div');
         element.className = 'element';
-        element.style.backgroundColor = 'rgba(0,127,127,' + ( Math.random() * 0.5 + 0.25 ) + ')';
-
-        var number = document.createElement('div');
-        number.className = 'number';
-        number.textContent = (i / 5) + 1;
-        element.appendChild(number);
+        element.style.backgroundColor = 'rgba(0,127,127,' + 0.45 + ')';
 
         var symbol = document.createElement('div');
         symbol.className = 'symbol';
-        symbol.textContent = table[ i ];
+        symbol.textContent = table[i][0];
         element.appendChild(symbol);
 
         var details = document.createElement('div');
         details.className = 'details';
-        details.innerHTML = table[ i + 1 ] + '<br>' + table[ i + 2 ];
+        var count = table[i][1];
+        details.innerHTML = count + '<br>' + (Math.trunc(count / countSum * 100000) / 1000) + '%';
         element.appendChild(details);
 
         var object = new THREE.CSS3DObject(element);
@@ -48,8 +44,10 @@ function init() {
         //
 
         var object = new THREE.Object3D();
-        object.position.x = ( table[ i + 3 ] * 140 ) - 1330;
-        object.position.y = -( table[ i + 4 ] * 180 ) + 990;
+        object.position.x = ((i % 15) * 190) - 1300;
+        object.position.y = (Math.trunc(i / 15) * -150) + 550;
+        //object.position.x = ( table[ i + 3 ] * 140 ) - 1330;
+        //object.position.y = -( table[ i + 4 ] * 180 ) + 990;
 
         targets.table.push(object);
 

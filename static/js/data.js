@@ -1,3 +1,4 @@
+var countSum = 80162586;
 var table = [
     ["tühik", 10326452],
     ["A", 8100857],
