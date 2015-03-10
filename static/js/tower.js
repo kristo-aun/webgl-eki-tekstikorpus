@@ -3,6 +3,7 @@ var container = document.getElementById('container');
 var camera, scene, renderer, controls, light;
 
 var plane;
+var theta = 0;
 
 init(container);
 animate();
@@ -59,11 +60,9 @@ function init(container) {
 
     // Controls
 
-    controls = new THREE.TrackballControls(camera, renderer.domElement);
-    controls.rotateSpeed = 0.5;
-    controls.minDistance = 500;
-    controls.maxDistance = 6000;
-    controls.addEventListener('change', render);
+    controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+    controls.addEventListener( 'change', render );
 
     // Listeners
 
@@ -91,6 +90,10 @@ function addMesh(width, height, depth, callback) {
     callback(mesh);
 }
 
+function addPlane(width, height, callback) {
+    callback(plane);
+}
+
 
 function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
@@ -101,9 +104,26 @@ function onWindowResize() {
 
 function animate() {
     requestAnimationFrame(animate);
+
+    //theta = 0.01 //the speed of rotation
+    // rotate camera
+    //theta += 0.01;
+    //var radius = 2500;
+
+    //camera.position.x = radius * Math.sin( theta);
+    //camera.position.y = radius * Math.sin( theta);
+    //camera.position.z = radius * Math.cos( theta);
+    //camera.lookAt( scene.position );
+
+    //console.log("pos=", camera.position);
+
     controls.update();
 }
 
 function render() {
     renderer.render(scene, camera);
+}
+
+function degToRad(degrees){
+    return degrees * (Math.PI / 180);
 }
