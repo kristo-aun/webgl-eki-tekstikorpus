@@ -19,7 +19,6 @@ function init(container) {
     // table
 
     for (var i = 0; i < table.length; i++) {
-        console.log(i);
         var element = document.createElement('div');
         element.className = 'element';
         element.style.backgroundColor = 'rgba(0,127,127,' + 0.45 + ')';
