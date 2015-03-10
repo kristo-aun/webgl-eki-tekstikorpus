@@ -1,13 +1,15 @@
+var container = document.getElementById('container');
+
 var camera, scene, renderer;
 var controls;
 
 var objects = [];
 var targets = { table: []};
 
-init();
+init(container);
 animate();
 
-function init() {
+function init(container) {
 
     camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 1, 10000);
     camera.position.z = 3000;
@@ -55,7 +57,7 @@ function init() {
     renderer = new THREE.CSS3DRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.domElement.style.position = 'absolute';
-    document.getElementById('container').appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
 
     //
 
@@ -68,11 +70,6 @@ function init() {
     var button = document.getElementById('table');
     button.addEventListener('click', function (event) {
         transform(targets.table, 2000);
-    }, false);
-
-    var button = document.getElementById('grid');
-    button.addEventListener('click', function (event) {
-        transform(targets.grid, 2000);
     }, false);
 
     transform(targets.table, 2000);
