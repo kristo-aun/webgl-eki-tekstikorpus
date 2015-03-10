@@ -22,10 +22,8 @@ function init(container) {
 
     scene = new THREE.Scene();
 
-    light = new THREE.PointLight(0x8844ff, 5, 100);
-    light.position.set( 2000, -1500, 1500);
-    scene.add(light);
-    scene.add(new THREE.PointLightHelper(light, 50));
+    // ambient
+    scene.add(new THREE.AmbientLight( 0x222222 ) );
 
     // Cubes
 
@@ -73,11 +71,20 @@ function init(container) {
 }
 
 function addMesh(width, height, depth, callback) {
-
-
-
     var geometry = new THREE.BoxGeometry(width, height, depth);
-    var material = new THREE.MeshBasicMaterial({vertexColors: THREE.NoColors, overdraw: false, color: 0x00ffff, transparent: true, opacity: 0.9});
+
+    var material = new THREE.MeshLambertMaterial( {
+        color: 0x00ffff,
+        polygonOffset: true,
+        polygonOffsetFactor: 1,
+        polygonOffsetUnits: 1,
+        shading: THREE.FlatShading,
+        transparent: true,
+        opacity: 0.9,
+        overdraw: 0.1 // for canvasRenderer only
+    } );
+
+    //var material = new THREE.MeshBasicMaterial({vertexColors: THREE.NoColors, overdraw: false, color: 0x00ffff, transparent: true, opacity: 0.9});
 
     var mesh = new THREE.Mesh(geometry, material);
 
