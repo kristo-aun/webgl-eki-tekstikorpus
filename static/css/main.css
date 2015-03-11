@@ -15,9 +15,33 @@ a {
 
 #menu {
     position: absolute;
-    bottom: 20px;
+    top: 20px;
     width: 100%;
     text-align: center;
+}
+
+div.info {
+    position: absolute;
+    color: white;
+    background-color: black;
+    padding:20px;
+    -moz-border-radius: 13px;
+    -webkit-border-radius: 13px;
+    border-radius: 13px;
+}
+
+div#info-tower {
+    top:20%;
+    right: 20px;
+    width: 25%;
+    display: none;
+}
+
+div#info-table {
+    bottom:20px;
+    right: 20px;
+    width: 25%;
+    display: none;
 }
 
 .element {
@@ -72,6 +96,14 @@ button {
 }
 
 button:hover {
+    background-color: rgba(0, 255, 255, 0.5);
+}
+
+button.active {
+    background-color: rgba(0, 255, 255, 0.3);
+}
+
+button.active:hover {
     background-color: rgba(0, 255, 255, 0.5);
 }
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no"/>
+    <meta name="author" content="Kristo Aun"/>
+    <title>WebGL EKI keelekorpuse 3D</title>
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+<body>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/three.js/three.min.js"></script>
+<script src="static/three.js/js/libs/tween.min.js"></script>
+<script src="static/three.js/js/controls/TrackballControls.js"></script>
+<script src="static/three.js/js/renderers/CSS3DRenderer.js"></script>
+
+<div id="container"></div>
+<div id="menu">
+    <button id="intro" onclick="location.href='index.html';">1</button>
+    <button class="active" id="table">2</button>
+    <button id="tower" onclick="location.href='tower.html';">3</button>
+</div>
+
+<div id="info-table" class="info">
+    <p>Korpuses loendatud märke on 99. Märgid on reastatud sageduse järgi kahanevalt.</p>
+    <p>Iga märgi juures on selle esinemise sagedus ja protsentuaalne osa.</p>
+</div>
+
+<script src="static/js/data.js"></script>
+<script src="static/js/table.js"></script>
+
+<script>
+    $(document).ready(function () {
+        setTimeout(function () {
+            $('div#info-table').fadeIn(2000);
+        }, 3000);
+    });
+</script>
+</body>
+</html>

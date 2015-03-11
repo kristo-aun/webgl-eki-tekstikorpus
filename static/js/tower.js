@@ -155,31 +155,6 @@ function addTextPlane(data, height, width, callback) {
     callback(mesh1);
 }
 
-function addDataElement(width, height, data, callback) {
-
-    var element = document.createElement('div');
-    element.className = 'element';
-
-    element.style.height = height;
-    element.style.width = width;
-
-    element.style.backgroundColor = 'rgba(0,127,127,' + 0.45 + ')';
-
-    var symbol = document.createElement('div');
-    symbol.className = 'symbol';
-    symbol.textContent = data[0];
-    element.appendChild(symbol);
-
-    var details = document.createElement('div');
-    details.className = 'details';
-    var count = data[1];
-    details.innerHTML = count + '<br>' + (Math.floor(count / countSum * 100000) / 1000) + '%';
-    element.appendChild(details);
-
-    callback(element);
-}
-
-
 function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
