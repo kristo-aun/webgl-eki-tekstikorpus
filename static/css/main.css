@@ -30,15 +30,26 @@ div.info {
     border-radius: 13px;
 }
 
-div#info-tower {
-    top:20%;
-    right: 20px;
-    width: 25%;
-    display: none;
+div#info-index {
+    top:15%;
+    right: 20%;
+    left: 20%;
+}
+
+div#info-index p {
+    width: 100%;
+    float: left;
 }
 
 div#info-table {
-    bottom:20px;
+    bottom:40px;
+    right: 40px;
+    width: 23%;
+    display: none;
+}
+
+div#info-tower {
+    top:20%;
     right: 20px;
     width: 25%;
     display: none;

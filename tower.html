@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no"/>
-		<meta name="author" content="Kristo Aun"/>
-		<title>WebGL EKI keelekorpuse 3D</title>
-		<link rel="stylesheet" href="static/css/main.css">
-	</head>
-	<body>
-		<script src="static/js/jquery.min.js"></script>
-		<script src="static/three.js/three.min.js"></script>
-		<script src="static/three.js/js/renderers/CanvasRenderer.js"></script>
-        <script src="static/three.js/js/renderers/CSS3DRenderer.js"></script>
-        <script src="static/three.js/js/controls/OrbitControls.js"></script>
-        <script src="static/three.js/js/renderers/Projector.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no"/>
+    <meta name="author" content="Kristo Aun"/>
+    <title>WebGL EKI keelekorpuse 3D</title>
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+<body>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/three.js/three.min.js"></script>
+<script src="static/three.js/js/renderers/CanvasRenderer.js"></script>
+<script src="static/three.js/js/renderers/CSS3DRenderer.js"></script>
+<script src="static/three.js/js/controls/OrbitControls.js"></script>
+<script src="static/three.js/js/renderers/Projector.js"></script>
 
-        <div id="container"></div>
-		<div id="menu">
-			<button id="intro" onclick="location.href='index.html';">1</button>
-			<button id="table" onclick="location.href='table.html';">2</button>
-			<button class="active" id="tower">3</button>
-		</div>
+<div id="container"></div>
+<div id="menu">
+    <button id="intro" onclick="location.href='index.html';">1</button>
+    <button id="table" onclick="location.href='table.html';">2</button>
+    <button class="active" id="tower">3</button>
+</div>
 
-		<div id="info-tower" class="info">
-			<p>Tühik on korpuses sagedasim, 10'326'452 korral esinev märk.</p>
-			<p>Kümne sagedasema märgi hulgas on 4 täishäälikut - A, E, I ja U. Esimese kümne hulgast jääb napilt välja O.</p>
-			<p>Number 9 suur sagedus tuleneb tõenäoliselt aastaarvude (199x) sagedasest kasutusest ajalehtedes.</p>
-			<p>Võõrtähtede kasutuse kohta ei saa selle korpuse põhjal üldistusi teha. Osalt seetõttu,
-				et korpuse materjal pärineb arvutikirjastamise algaastaist, mil raskusi oli isegi
-				eesti tähestiku tähtedega, osalt seetõttu, et materjal on laekunud tuhandel eri kujul
-				(DOS, Mac, Win, Word Perfect, HTML, omatehtud kooditabelid ja fondid jne), osalt ka seetõttu,
-				et 80 miljonit on väike arv. Viimase väite illustratsiooniks olgu märgitud, et nt Û ehk 'katusega u'
-				esineb rohkem kui Rootsi Å kuid ainult ühes raamatus —
-				Tolkieni "Sõrmuste isandas" — ja sealgi ainult päkapikunimedes.</p>
-		</div>
+<div id="info-tower" class="info">
+    <p>Tühik on korpuses sagedasim, 10'326'452 korral esinev märk, millele järgneb täishäälik A.</p>
 
-        <script src="static/js/data.js"></script>
-        <script src="static/js/tower.js"></script>
+    <p>Kümne sagedasema märgi hulgas on 4 täishäälikut - A, E, I ja U. Esimese kümne hulgast jääb napilt välja O.</p>
 
-		<script>
-			$(document).ready(function(){
-				setTimeout(function(){
-							$('div#info-tower').fadeIn(1000);
-						},
-						100);
-			});
-		</script>
-	</body>
+    <p>Numbrimärgid sageduse järgi kahanevalt - 0, 1, 2, 9, 5, 3, 6, 4, 7, 8.
+        Null on kõige sagedasemalt kasutatav number, sest suurem osa arve, näiteks rahanumbrid, esitatakse ümardatult.
+        Number 9 suur sagedus tuleneb tõenäoliselt aastaarvude (199x) sagedasest kasutusest ajalehtedes.</p>
+
+    <p>Võõrtähtede kasutuse kohta ei saa selle korpuse põhjal üldistusi teha. Osalt seetõttu,
+        et korpuse materjal pärineb arvutikirjastamise algaastaist, mil raskusi oli isegi
+        eesti tähestiku tähtedega, osalt seetõttu, et materjal on laekunud tuhandel eri kujul
+        (DOS, Mac, Win, Word Perfect, HTML, omatehtud kooditabelid ja fondid jne), osalt ka seetõttu,
+        et 80 miljonit on väike arv. Viimase väite illustratsiooniks olgu märgitud, et nt Û ehk 'katusega u'
+        esineb rohkem kui Rootsi Å kuid ainult ühes raamatus —
+        Tolkieni "Sõrmuste isandas" — ja sealgi ainult päkapikunimedes.</p>
+</div>
+
+<script src="static/js/data.js"></script>
+<script src="static/js/tower.js"></script>
+
+<script>
+    $(document).ready(function () {
+        setTimeout(function () {
+            $('div#info-tower').fadeIn(1000);
+        }, 100);
+    });
+</script>
+</body>
 </html>

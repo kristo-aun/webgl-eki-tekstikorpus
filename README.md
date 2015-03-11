@@ -5,7 +5,7 @@ WebGL tehnoloogia abil (EKI tekstikorpuse)[http://eki.ee/corpus/stats1.html] ana
 3D-graafiliselt on kujutatud üksikute märkide sagedus korpuses. Märke on kokku 80,6 miljonit.
 Suurima sagedusega esineb tühik (10'326'452), millele järgnevad A (8'100'857) ja E (7'028'435).
 
-Kuna märkide sageduse iseloomustab keele struktuuri ja kõla, annab sageduste graafiline kujutamine hea ülevaate
+Kuna märkide sagedus iseloomustab keele struktuuri ja kõla, annab sageduste graafiline kujutamine hea ülevaate
 Tekstikorpuste analüüs võimaldab keeleteadlastel teha mitmeid järeldusi.
 
 Keelekorpuste statistika üheks rakendusvaldkonnaks on krüptograafia. Näiteks saab murda afiinset šifrit kui kõrvutada tähtede sagedusi krüptogrammis ja keelekorpuses.
