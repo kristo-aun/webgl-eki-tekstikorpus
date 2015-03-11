@@ -45,8 +45,6 @@ function init(container) {
 
             mesh.position.z = depth / 2;
 
-            mesh.c_text = "aa";
-
             scene.add(mesh);
 
             var edges = new THREE.EdgesHelper(mesh, 0x7FFFFF);
