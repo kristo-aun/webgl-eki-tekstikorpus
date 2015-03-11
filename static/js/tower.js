@@ -57,7 +57,7 @@ function init(container) {
         //*/
 
 
-        addTextPlane(table[i][0], height, width, depth, function(mesh) {
+        addTextPlane(table[i], height, width, function(mesh) {
 
             mesh.position.x = ((i % tableRowModule) * (height + margin)) - 1300;
             mesh.position.y = (Math.floor(i / tableRowModule) * -(width + margin)) + 550;
@@ -109,7 +109,8 @@ function addMesh(height, width, depth, callback) {
     callback(mesh);
 }
 
-function addTextPlane(text, height, width, depth, callback) {
+function addTextPlane(data, height, width, callback) {
+    var text = data[0];
     var geometry = new THREE.BoxGeometry(height, width, 0);
 
     var back_color = 'rgba(0,127,127,0.5)';
@@ -126,7 +127,8 @@ function addTextPlane(text, height, width, depth, callback) {
 
     temp_context.font = font;
     temp_context.fillStyle = text_color;
-    temp_context.fillText(text, 103, 60); //... offset_width, offset_depth of start point of text string (bottom left corner of 1st char).
+    temp_context.fillText(text, 70, 55); //... offset_width, offset_depth of start point of text string (bottom left corner of 1st char).
+    temp_context.fillText(data[1], 115, 135);
 
     //... NB texture doesn't need to know name of the context, just the name of the canvas
     var temp_texture = new THREE.Texture(temp_canvas);
