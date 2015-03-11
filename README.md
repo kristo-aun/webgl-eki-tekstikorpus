@@ -35,3 +35,7 @@ Lisasin Ambient valgustuse.
 ## Lisa
 - **[Lähtekood GitHubis](https://github.com/kristoaun/webgl-eki-tekstikorpus)**
 - **[Veebis](http://momo.koodur.com/proxy-apache2/ttu/multimeedia/index.html)**
+
+![1_esimene_slaid](screenshot/1_esimene_slaid.png)
+![2_teine_slaid](screenshot/2_teine_slaid.png)
+![3_kolmas_slaid](screenshot/3_kolmas_slaid.png)
